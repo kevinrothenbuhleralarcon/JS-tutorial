@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            var estPremier = function (nombre) {
+                for (var i = 2; i < nombre; i++) {
+                    if (nombre % i ===0) {
+                        return false
+                    }
+                    return true
+                }
+            }
+
+            function multiply(a, b) {
+                return a * b
+            }
+
+            var classeA = [{
+                nom: "Marc",
+                moyenne: 15
+            }, {
+                nom: "Marion",
+                moyenne: 8
+            }, {
+                nom: "Antoine",
+                moyenne: 4
+            }, {
+                nom: "Jean",
+                moyenne: 14
+            }]
+
+            var classeB = [{
+                nom: "Sebastien",
+                moyenne: 8
+            }, {
+                nom: "Marine",
+                moyenne: 6
+            }, {
+                nom: "Pedro",
+                moyenne: 14
+            }, {
+                nom: "Violette",
+                moyenne: 14
+            }]
+
+            function afficherQuiaLaMoyenne(eleves) {
+                eleves.forEach(eleve => {
+                    if (eleve.moyenne >= 10) {
+                        console.log(eleve.nom + " a la moyenne.")
+                    }
+                });
+            }
+
+            afficherQuiaLaMoyenne(classeA)
+            afficherQuiaLaMoyenne(classeB)
+
+            var pikachu = {
+                crier: function () {
+                    console.log("Pikachu")
+                }
+            }
+
+            var a = [1, 2]
+            a.push(3)
+
+            var aLaMoyenne = function (eleves) {
+                var moyenne = []
+                eleves.forEach(eleve => {
+                    if (eleve.moyenne >= 10)
+                    moyenne.push(eleve)
+                })
+                return moyenne
+            }
+            console.log(aLaMoyenne(classeA))
+
+
+            //EXERCICE
+            var phrase = "Le premier point auquel il faut faire attention est le choix de la propriété à modifier pour un élément HTML"
+
+            function countWord(phrase) {
+                let words = phrase.toLowerCase().split(" ")
+                var compteur = {}
+                words.forEach(word => {
+                    if (compteur[word] === undefined) {
+                        compteur[word] = 1
+                    } else {
+                        compteur[word] ++
+                    }
+                })
+                console.log(compteur)
+            }
+
+            countWord(phrase)
+
+            //EXERCICE 2
+            var eleve1 = {
+                nom: "Jean",
+                notes: [15, 16, 18]
+            }
+
+            var eleve2 = {
+                nom: "Marc",
+                notes: [15, 18, 20]
+            }
+
+            function estMeilleur(eleve1, eleve2) {
+                return moyenne(eleve1) > moyenne (eleve2)
+            }
+
+            function moyenne(eleve) {
+                let moyenne = 0
+                eleve.notes.forEach(note => {
+                    moyenne += note
+                })
+                return moyenne / eleve.notes.legth
+            }
+
+            if (estMeilleur(eleve1, eleve2)) {
+                console.log(eleve1.nom + " est meilleur")
+            } else {
+                console.log(eleve2.nom + " est meilleur")
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
