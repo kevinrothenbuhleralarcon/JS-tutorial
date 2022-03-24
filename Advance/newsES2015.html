@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            class Classe {
+                //...variable permet de faire l'équivalant d'un varargs
+                //On peut assigner des valeur par défaut à une fonction et créer une classe "standard"
+                constructor(name = "CM2", ...eleves) {
+                    this.eleves = eleves,
+                    this.nom = name
+                }
+            
+                afficheEleve() {
+                    //le ` permet d'avoir du texte multiligne et d'inserer les variable comme dans Kotlin
+                    console.log(`Les éleves de la classe ${this.nom}`)
+                    this.eleves.forEach((v) => {
+                        console.log(v) 
+                    })
+                }
+            }
+
+            class Classe2 extends Classe {
+                constructor(name = "CM2", ...eleves) {
+                    super(name, ...eleves)
+                    this.nom = `Classe2 ${name}`
+                }
+
+                demo() {
+                    console.log("demo")
+                    this.afficheEleve()
+                }
+            }
+
+            let c = new Classe2("CM1", "Jean", "Marc", "Francis")
+            c.demo()
+            //c.afficheEleve()
+
+            let tab1 = ["Teemo", "Volibear"]
+            //... permet également de passer chaque élements à la suite
+            let tab2 = ["Darius", "Varus", ...tab1]
+
+            console.log(tab2)
+
+            let chaine ="sdafkjlasjdfadtimo"
+            console.log(chaine.includes("timo"))
+
+            //Promise prend en paramète une fonction avec 2 paramètres, la fonction à envoyer à la résolution et la fonction à l'echec
+            function startTimer(duration = 1000) {
+                return new Promise((resolve, reject) => {
+                    //setTimeout(() => resolve(`Fin du timer ${duration/1000}s`), duration)
+                    setTimeout(() => reject(`Fin du timer ${duration/1000}s`), duration * 2)
+                })
+            }
+
+            startTimer(1500)
+                .then(msg => console.log(msg))
+                .catch(msg => console.log(`echec ${msg}`))
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
