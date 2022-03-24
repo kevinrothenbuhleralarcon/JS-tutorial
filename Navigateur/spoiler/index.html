@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .spoiler-content {
+                display: inline-block;
+                height: 0;
+                width: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: opacity 1s;
+            }
+            .spoiler-content.visible {
+                display: inline;
+                height: auto;
+                width: auto;
+                opacity: 1;
+            }
+        </style>
+        <script src="app.js" defer></script>
+        <title>Spoiler</title>
+    </head>
+    <body>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia odio ducimus tempore in doloremque sapiente, voluptate iste, culpa officia, impedit modi. Mollitia fuga itaque nobis doloremque voluptatem illum, provident eaque?
+        </p>
+        <p class="spoiler">
+            Monsieur X meurt à la fin
+        </p>
+        <p>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reiciendis dignissimos unde aspernatur vero, consectetur praesentium architecto facilis quibusdam vitae maiores fugiat nam doloribus dolores iste odit molestias enim laboriosam.</span>
+            <span>Lorem <span class="spoiler">ipsum dolor sit amet</span> consectetur adipisicing elit. Nisi molestiae sunt ullam eos veniam quis unde corporis aliquid in, odio, eligendi atque sapiente facilis, ex tenetur quae exercitationem voluptatem. Deleniti.</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestias illum quia magni animi iusto ipsum itaque aliquid sed similique, expedita ut, saepe molestiae aperiam amet unde quis doloremque voluptates?</span>
+        </p>
+    </body>
+</html>
