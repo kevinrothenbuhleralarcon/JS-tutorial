@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var marc = {
+                nom: "marc",
+                age: 18,
+                moyenne: 15
+            }
+            if (marc.age >= 18) {
+                console.log("Tu peux passer ton permis")
+            } else if (marc.age >= 15) {
+                console.log("Tu paux faire de la conduite accompagnée")
+            } else {
+                console.log("Tu ne peux pas conduire")
+            }
+
+            console.log(marc.age >= 18 ? "tu es majeur" : "tu es mineur")
+
+            if (marc.age >= 18 && marc.age < 25) {
+                console.log ("Tu as droit au tarif réduit")
+            }
+
+            if (marc.age == '18') {
+                console.log("le test fonctionne avec un string")
+            }
+
+            if (marc.age === '18') {
+                console.log("le test ne fonctionne avec un string car on test également le type")
+            }
+
+            switch (marc.age) {
+                case 18: 
+                    console.log("Tu peux passer ton permis")
+                    break
+                case 25: 
+                    console.log("Bravo tu as un quart de siecle")
+                    break
+                case 50: 
+                    console.log("Bravo tu as un demi siecle")
+                    break
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

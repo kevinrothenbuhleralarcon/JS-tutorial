@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <script>
+            var demo = function() {
+                console.log(this)
+            }
+            demo()
+            
+            var eleve = {
+                nom: "jean",
+                present: function() {
+                    console.log(this.nom + " present ")
+                }
+            }
+            eleve.present()
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
